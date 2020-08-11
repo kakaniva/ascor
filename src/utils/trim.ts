@@ -6,7 +6,7 @@ import { isString } from "../is";
  * @return string 返回字符串
  */
 
-export const trimAll = (str: string) => {
+export const trim = (str: string) => {
 	if (!isString(str)) {
 		return str;
 	}

@@ -1,3 +1,5 @@
+import { isNumber } from "../is";
+
 //随机的字符库，26个字母大小写加0-9
 let $char: Array<number | string> = [];
 
@@ -11,10 +13,16 @@ for (let i = 0; i < 26; i++) {
 
 /**
  * 生成随机字符串
- * @param {Number} num 随机数位数，默认36位
+ * @param  num 随机数位数，默认36位 例： 12 ，'12'
  * @return string 返回字符串
  */
-export const getRanStr = (num: number = 36): string => {
+export const getRanStr = (num: number | string = 36): string => {
+	if (!isNaN(<number>num)) {
+		num = Number.parseInt(<string>num);
+	}
+	if (!isNumber(num)) {
+		num = 36;
+	}
 	let str: string = "";
 	//先随机36位字符串数组
 	for (let i = 0; i < num; i++) {

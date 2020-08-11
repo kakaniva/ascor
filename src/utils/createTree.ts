@@ -8,16 +8,16 @@ interface createTreeConfigMode {
 /**
  * 根据返回的数组创建树接口
  * @param  arr
- * @param {Object} param1，parentKey为父节点唯一标识的字段名，例如parentId，ownKey为自己的唯一表示，如id
+ * @param  config，parentKey为父节点唯一标识的字段名，例如pid，ownKey为自己的唯一表示，如id
  * @return 返回创建好的树
  */
 
-export const createTree = (arr: any[], config: createTreeConfigMode = { parentKey: "parentId", ownKey: "id" }) => {
+export const createTree = (arr: any[], config: createTreeConfigMode = { parentKey: "pid", ownKey: "id" }) => {
 	if (!isArray(arr)) {
 		return arr;
 	}
 	let _config = {
-		parentKey: "parentId",
+		parentKey: "pid",
 		ownKey: "id",
 		...(isObject(config) ? config : {}),
 	};

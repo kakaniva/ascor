@@ -3,7 +3,7 @@ import { isArray } from "./isArray";
 
 describe("isArray 函数测试", () => {
 	it("isArray('something') 结果为 false", function () {
-		expect(isArray("sdf")).to.be.false;
+		expect(isArray("something")).to.be.false;
 	});
 	it("isArray(123456) 结果为 false", function () {
 		expect(isArray(123456)).to.be.false;

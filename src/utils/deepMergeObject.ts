@@ -8,6 +8,12 @@ import { isObject } from "../is";
  */
 
 export const deepMergeObject = (FirstOBJ: { [x: string]: any }, SecondOBJ: { [x: string]: any }) => {
+	if (!isObject(FirstOBJ)) {
+		return FirstOBJ;
+	}
+	if (!isObject(SecondOBJ)) {
+		return FirstOBJ;
+	}
 	// 深度合并对象
 	for (let key in SecondOBJ) {
 		FirstOBJ[key] = FirstOBJ[key] && isObject(FirstOBJ[key]) ? deepMergeObject(FirstOBJ[key], SecondOBJ[key]) : (FirstOBJ[key] = SecondOBJ[key]);
