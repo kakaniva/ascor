@@ -1,0 +1,32 @@
+{
+	"name": "kacore",
+	"version": "1.0.0",
+	"description": "一些常用的简单的js工具",
+	"main": "lib/main.js",
+	"scripts": {
+		"test": "mocha --require ts-node/register \"./**/*.spec.ts\"",
+		"test:report": "mocha --require ts-node/register \"./**/*.spec.ts\" -R mochawesome --reporter-options reportDir=report,reportFilename=test.report.html",
+		"build": "node delDir.js && tsc --build tsconfig.json"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git@gitee.com:kakaniva/kacore.git"
+	},
+	"keywords": [
+		"js工具",
+		"utils",
+		"tools"
+	],
+	"author": "kakaniva",
+	"license": "UNLICENSED",
+	"devDependencies": {
+		"@types/chai": "^4.2.12",
+		"@types/mocha": "^8.0.1",
+		"@types/node": "^14.0.27",
+		"chai": "^4.2.0",
+		"mocha": "^8.1.1",
+		"mochawesome": "^6.1.1",
+		"ts-node": "^8.10.2",
+		"typescript": "^3.9.7"
+	}
+}

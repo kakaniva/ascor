@@ -1,0 +1,55 @@
+{
+	"include": ["src/**/*"],
+	"exclude": ["node_modules", "**/*.spec.ts"],
+	"compilerOptions": {
+		"lib": [
+			"ES5",
+			"ES6",
+			"ES2015",
+			"ES7",
+			"ES2016",
+			"ES2017",
+			"ES2018",
+			"ESNext",
+			"DOM",
+			"DOM.Iterable",
+			"ES2015.Core",
+			"ES2015.Collection",
+			"ES2015.Generator",
+			"ES2015.Iterable",
+			"ES2015.Promise",
+			"ES2015.Proxy",
+			"ES2015.Reflect",
+			"ES2015.Symbol",
+			"ES2015.Symbol.WellKnown",
+			"ES2016.Array.Include",
+			"ES2017.object",
+			"ES2017.Intl",
+			"ES2017.SharedMemory",
+			"ES2017.String",
+			"ES2017.TypedArrays",
+			"ES2018.Intl",
+			"ES2018.Promise",
+			"ES2018.RegExp",
+			"ESNext.AsyncIterable",
+			"ESNext.Array",
+			"ESNext.Intl",
+			"ESNext.Symbol"
+		] /* Specify library files to be included in the compilation. */,
+		"allowJs": true /* Allow javascript files to be compiled. */,
+		"checkJs": true /* Report errors in .js files. */,
+		// "jsx": "preserve",                     /* Specify JSX code generation: 'preserve', 'react-native', or 'react'. */
+		
+		"rootDir": "./src" /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */,
+		/* Strict Type-Checking Options */
+		"strict": true /* Enable all strict type-checking options. */,
+		"baseUrl": "./" /* Base directory to resolve non-absolute module names. */,
+		// "paths": {} /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'. */,
+		"esModuleInterop": true /* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. */,
+		"experimentalDecorators": true /* Enables experimental support for ES7 decorators. */,
+		"emitDecoratorMetadata": true /* Enables experimental support for emitting type metadata for decorators. */,
+		/* Advanced Options */
+		"skipLibCheck": true /* Skip type checking of declaration files. */,
+		"forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */
+	}
+}
