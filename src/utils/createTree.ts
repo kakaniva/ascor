@@ -8,7 +8,7 @@ interface createTreeConfigMode {
 /**
  * 根据返回的数组创建树接口
  * @param  arr
- * @param  config，parentKey为父节点唯一标识的字段名，例如pid，ownKey为自己的唯一表示，如id
+ * @param  config，例：{ parentKey: "pid", ownKey: "id" } ，parentKey为父节点唯一标识的字段名，例如pid，ownKey为自己的唯一表示，如id
  * @return 返回创建好的树
  */
 
