@@ -21,7 +21,8 @@ export const createTree = (arr: any[], config: createTreeConfigMode = { parentKe
 		ownKey: "id",
 		...(isObject(config) ? config : {}),
 	};
-	let tmp = [...arr].map((m) => {
+	let index: number = 0;
+	let tmp = arr.map((m) => {
 			return {
 				...m,
 				children: [],
@@ -34,8 +35,7 @@ export const createTree = (arr: any[], config: createTreeConfigMode = { parentKe
 				},
 			};
 		}),
-		tmp2: any[] = [],
-		f = (index: number, data: any) => {
+		f = (data: any) => {
 			if (isArray(data)) {
 				for (let k = 0; k < data.length; k++) {
 					if (tmp[index][_config.parentKey] == data[k][_config.ownKey]) {
@@ -46,20 +46,19 @@ export const createTree = (arr: any[], config: createTreeConfigMode = { parentKe
 								})
 								.includes(tmp[index][_config.ownKey])
 						) {
-							data[k].children.push(tmp[index]);
+							data[k].children.push(tmp.splice(index, 1)[0]);
+							index--;
 						}
-						tmp2.push(index);
 						break;
 					} else {
-						f(index, data[k].children);
+						f(data[k].children);
 					}
 				}
 			}
 		};
-	for (let index = 0; index < tmp.length; index++) {
-		f(index, tmp);
+
+	for (index = 0; index < tmp.length; index++) {
+		f(tmp);
 	}
-	return tmp.filter((m, i) => {
-		return !tmp2.includes(i);
-	});
+	return tmp;
 };
