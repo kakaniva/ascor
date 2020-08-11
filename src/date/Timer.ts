@@ -10,7 +10,7 @@ export const Timer = class {
 	/**
 	 * 开始计时
 	 */
-	start(): void {
+	public start(): void {
 		if (!this.isStart) {
 			this.isStart = true;
 		}
@@ -19,7 +19,7 @@ export const Timer = class {
 	/**
 	 * 步进，执行一次返回经过的时间毫秒数
 	 */
-	async step(): Promise<number> {
+	public async step(): Promise<number> {
 		if (!this.isStart) {
 			return 0;
 		}
@@ -28,7 +28,7 @@ export const Timer = class {
 	/**
 	 * 停止计时，返回经过的毫秒数
 	 */
-	async stop(): Promise<number> {
+	public async stop(): Promise<number> {
 		let s = await this.step();
 		this.isStart = false;
 		return s;
