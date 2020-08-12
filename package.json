@@ -1,5 +1,5 @@
 {
-	"name": "kacore",
+	"name": "asco",
 	"version": "1.0.0",
 	"description": "一些常用的简单的js工具",
 	"main": "lib/main.js",
@@ -10,7 +10,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git@gitee.com:kakaniva/kacore.git"
+		"url": "git@gitee.com:kakaniva/asco.git"
 	},
 	"keywords": [
 		"js工具",

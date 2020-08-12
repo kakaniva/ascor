@@ -1,4 +1,4 @@
-# kacore
+# asco
 
 ### 介绍
 
@@ -8,27 +8,27 @@
 
 ```bash
 # 使用npm
-npm install -S kacore
+npm install -S asco
 
 # 使用yarn
-yarn add -S kacore
+yarn add -S asco
 ```
 
 ### 使用教程
 
 ```javascript
-import { isNumber } from "kacore";
+import { isNumber } from "asco";
 //或
-import * as kc from "kacore";
+import * as asc from "asco";
 
 isNumber(45); // true
 isNumber("45"); // false
 isNumber.all("45", 45); // false
 isNumber.or("45", 45); // true
 
-kc.isNumber(12); //true
-kc.isNumber.all(12, 23); //true
-kc.isNumber.or(12, 23, 45); //true
+asc.isNumber(12); //true
+asc.isNumber.all(12, 23); //true
+asc.isNumber.or(12, 23, 45); //true
 ```
 
 ### API
