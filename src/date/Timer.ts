@@ -19,7 +19,7 @@ export const Timer = class {
 	/**
 	 * 步进，执行一次返回经过的时间毫秒数
 	 */
-	public async step(): Promise<number> {
+	public step(): number {
 		if (!this.isStart) {
 			return 0;
 		}
@@ -28,8 +28,8 @@ export const Timer = class {
 	/**
 	 * 停止计时，返回经过的毫秒数
 	 */
-	public async stop(): Promise<number> {
-		let s = await this.step();
+	public stop(): number {
+		let s = this.step();
 		this.isStart = false;
 		return s;
 	}
