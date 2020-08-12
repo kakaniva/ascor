@@ -1,25 +1,25 @@
-# asco
+# ascor
 
 ### 介绍
 
-一些常用的 js 工具,ts 编写，但只转为 es6 语法，所以需要转 es5 的，请自行搞掂，一般的脚手架都会集成 babel 转码的，如:@vue/cli,create-react-app,@angular/cli
+一些常用的 js 工具,ts 编写
 
 ### 安装教程
 
 ```bash
 # 使用npm
-npm install -S asco
+npm install ascor
 
 # 使用yarn
-yarn add -S asco
+yarn add ascor
 ```
 
 ### 使用教程
 
 ```javascript
-import { isNumber } from "asco";
+import { isNumber } from "ascor";
 //或
-import * as asc from "asco";
+import * as asc from "ascor";
 
 isNumber(45); // true
 isNumber("45"); // false
