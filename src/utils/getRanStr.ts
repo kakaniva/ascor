@@ -1,4 +1,4 @@
-import { isNumber } from "../is";
+import { isNumber } from "../is/index";
 
 //随机的字符库，26个字母大小写加0-9
 let $char: Array<number | string> = [];

@@ -1,4 +1,4 @@
-import { isDeepEqual, isArray, isEmpty } from "../is";
+import { isDeepEqual, isArray, isEmpty } from "../is/index";
 /**
  * 判断数组是否有重复数据，针对一维数组,使用全等于判断  例如33和'33' 不相等，如果元素是对象则递归对比，如果对象包含方法函数则不相等
  * @param arr 传入需要搜索的数组

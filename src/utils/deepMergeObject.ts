@@ -1,4 +1,4 @@
-import { isObject } from "../is";
+import { isObject } from "../is/index";
 
 /**
  * 深度合并对象

@@ -1,4 +1,4 @@
-import { isString } from "../is";
+import { isString } from "../is/index";
 
 /**
  * 去除字符串左边空格，制表符，回车

@@ -1,4 +1,4 @@
-import { isFunction, isNumber } from "../is";
+import { isFunction, isNumber } from "../is/index";
 import { delay } from "./delay";
 
 /**

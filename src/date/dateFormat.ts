@@ -1,4 +1,4 @@
-import { isNumber } from "../is";
+import { isNumber } from "../is/index";
 /**
  * 时间格式化
  * @param {Date | Number} date 时间对象，如new Date(),new Date('2019/05/05 08:08:08') 或时间戳 如：1596507000

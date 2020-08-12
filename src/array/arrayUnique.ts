@@ -1,4 +1,4 @@
-import { isArray, isEmpty, isDeepEqual } from "../is";
+import { isArray, isEmpty, isDeepEqual } from "../is/index";
 import { arrayHasValue } from "./arrayHasValue";
 
 /**

@@ -1,4 +1,4 @@
-import { isString, isArray, isEmpty, isNumber, isObject } from "../is";
+import { isString, isArray, isEmpty, isNumber, isObject } from "../is/index";
 
 interface configMode {
 	mode?: "asc" | "desc"; //模式 asc：正序  desc：倒序,默认asc
