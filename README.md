@@ -74,3 +74,6 @@ asc.isNumber.or(12, 23, 45); //true
 -   **trim** 去除字符串首尾空格
 -   **trimL** 去除字符串左边空格
 -   **trimR** 去除字符串右边空格
+
+
+### [文档](https://gitee.com/kakaniva/ascor/wikis/pages)
