@@ -1,6 +1,6 @@
 {
 	"name": "ascor",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "一些常用的简单的js工具",
 	"main": "lib/main.js",
 	"scripts": {
