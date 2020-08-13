@@ -1,12 +1,12 @@
 {
 	"name": "ascor",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "一些常用的简单的js工具",
 	"main": "lib/main.js",
 	"scripts": {
-		"test": "mocha --require ts-node/register \"./**/*.spec.ts\" --build tsconfig.json",
+		"test": "mocha --require ts-node/register \"./**/*.spec.ts\" --build tsconfig.test.json",
 		"test:report": "mocha --require ts-node/register \"./**/*.spec.ts\" -R mochawesome --reporter-options reportDir=report,reportFilename=test.report.html",
-		"build": "node delDir.js && tsc --build tsconfig.json"
+		"build": "node delDir.js && tsc --build tsconfig.build.json"
 	},
 	"repository": {
 		"type": "git",
