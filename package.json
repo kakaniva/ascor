@@ -5,13 +5,14 @@
 	"main": "lib/main.js",
 	"scripts": {
 		"test": "mocha --require ts-node/register \"./**/*.spec.ts\" --build tsconfig.test.json",
-		"test:report": "mocha --require ts-node/register \"./**/*.spec.ts\" -R mochawesome --reporter-options reportDir=report,reportFilename=test.report.html",
+		"report": "mocha --require ts-node/register \"./**/*.spec.ts\" -R mochawesome --reporter-options reportDir=report,reportFilename=test.report.html",
 		"build": "node delDir.js && tsc --build tsconfig.build.json"
 	},
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/kakaniva/ascor.git"
 	},
+	"homepage": "https://kakaniva.github.io/ascor/",
 	"keywords": [
 		"js工具",
 		"utils",
