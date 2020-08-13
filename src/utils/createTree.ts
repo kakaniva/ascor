@@ -26,18 +26,13 @@ export const createTree = (arr: any[], config: createTreeConfigMode = { parentKe
 			return {
 				...m,
 				children: [],
-				get isLeaf() {
-					if (isArray(this.children) && this.children.length > 0) {
-						return false;
-					} else {
-						return true;
-					}
-				},
+				isLeaf: true,
 			};
 		}),
 		f = (data: any) => {
 			if (isArray(data)) {
 				for (let k = 0; k < data.length; k++) {
+					data[k].isLeaf = !(isArray(data[k].children) && data[k].children.length > 0);
 					if (tmp[index][_config.parentKey] == data[k][_config.ownKey]) {
 						if (
 							!data[k].children
@@ -47,6 +42,7 @@ export const createTree = (arr: any[], config: createTreeConfigMode = { parentKe
 								.includes(tmp[index][_config.ownKey])
 						) {
 							data[k].children.push(tmp.splice(index, 1)[0]);
+							data[k].isLeaf = false;
 							index--;
 						}
 						break;

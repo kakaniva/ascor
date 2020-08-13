@@ -4,7 +4,7 @@
 	"description": "一些常用的简单的js工具",
 	"main": "lib/main.js",
 	"scripts": {
-		"test": "mocha --require ts-node/register \"./**/*.spec.ts\"",
+		"test": "mocha --require ts-node/register \"./**/*.spec.ts\" --build tsconfig.json",
 		"test:report": "mocha --require ts-node/register \"./**/*.spec.ts\" -R mochawesome --reporter-options reportDir=report,reportFilename=test.report.html",
 		"build": "node delDir.js && tsc --build tsconfig.json"
 	},
