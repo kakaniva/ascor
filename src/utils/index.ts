@@ -5,3 +5,4 @@ export * from "./createTree";
 export * from "./deepMergeObject";
 export * from "./toThousands";
 export * from "./getRanStr";
+export * from "./diskSize";
