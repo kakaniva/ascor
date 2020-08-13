@@ -1,3 +1,4 @@
+#### toThousands 
 > 数组格式化 如 4567893 => 4,567,893
 
 ```javascript

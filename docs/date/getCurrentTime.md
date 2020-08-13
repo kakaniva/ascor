@@ -1,3 +1,4 @@
+#### getCurrentTime 
 > 获取当前时间，参数，默认 false 返回时间实例，true 返回时间戳（13 位）
 
 ```javascript

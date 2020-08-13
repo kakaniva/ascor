@@ -1,3 +1,4 @@
+#### isFunction 
 > 判断是否为函数
 
 ```javascript

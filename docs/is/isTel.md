@@ -1,3 +1,4 @@
+#### isTel 
 > 判断是否为固话，支持分机号 xxxx-xxxxxxx-xxxx
 
 ```javascript

@@ -1,3 +1,4 @@
+#### isNumber 
 > 判断是否为 Number 类型
 
 ```javascript

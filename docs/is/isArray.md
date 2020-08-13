@@ -1,3 +1,4 @@
+#### isArray 
 > 判断是否为 Array 类型
 
 ```javascript

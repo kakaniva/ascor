@@ -1,3 +1,4 @@
+#### getRanStr 
 > 获取随机字符串，默认 36 位
 
 ```javascript

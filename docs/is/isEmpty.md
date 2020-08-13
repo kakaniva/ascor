@@ -1,3 +1,4 @@
+#### isEmpty 
 > 判断是否为空值 ， 空字符串'' ,null ,undefined 都认为是空值
 
 ```javascript
