@@ -5,7 +5,7 @@ import { getCurrentTime } from "./getCurrentTime";
  */
 export const Timer = class {
 	public isStart: Boolean = false;
-	public begin: number | Date = getCurrentTime(true);
+	public begin: any = getCurrentTime(true);
 
 	/**
 	 * 开始计时
