@@ -25,7 +25,10 @@ export const getRanStr = (num: number | string = 36, source?: string): string =>
 		num = 36;
 	}
 	let str: string = "";
-	let strSource = isString(source) && !isEmpty(source) ? source : $char;
+	let strSource: string | (string | number)[] = $char;
+	if (isString(source) && !isEmpty(source)) {
+		strSource = source || $char;
+	}
 	//先随机36位字符串数组
 	for (let i = 0; i < num; i++) {
 		str += strSource[Math.floor(Math.random() * strSource.length)];

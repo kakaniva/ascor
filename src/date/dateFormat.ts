@@ -1,11 +1,14 @@
-import { isNumber } from "../is/index";
+import { isNumber, isString } from "../is/index";
 /**
  * 时间格式化
  * @param {Date | Number} date 时间对象，如new Date(),new Date('2019/05/05 08:08:08') 或时间戳 如：1596507000
  * @param {String} fmt 格式，如”YYYY-mm-dd HH:MM:SS“
  * @return 返回格式化的字符串
  */
-export const dateFormat = (date: Date | number = new Date(), fmt: string = "YYYY-mm-dd HH:MM") => {
+export const dateFormat = (date: Date | number | string = new Date(), fmt: string = "YYYY-mm-dd HH:MM") => {
+	if (isString(date)) {
+		date = Date.parse((<string>date).replace(/\-+/g, "/"));
+	}
 	if (!isNaN(<number>date)) {
 		date = Number(date);
 	}

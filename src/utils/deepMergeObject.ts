@@ -14,9 +14,11 @@ export const deepMergeObject = (FirstOBJ: { [x: string]: any }, SecondOBJ: { [x:
 	if (!isObject(SecondOBJ)) {
 		return FirstOBJ;
 	}
+	let one = { ...FirstOBJ },
+		two = { ...SecondOBJ };
 	// 深度合并对象
-	for (let key in SecondOBJ) {
-		FirstOBJ[key] = FirstOBJ[key] && isObject(FirstOBJ[key]) ? deepMergeObject(FirstOBJ[key], SecondOBJ[key]) : (FirstOBJ[key] = SecondOBJ[key]);
+	for (let key in two) {
+		one[key] = one[key] && isObject(one[key]) ? deepMergeObject(one[key], two[key]) : (one[key] = two[key]);
 	}
-	return FirstOBJ;
+	return one;
 };
