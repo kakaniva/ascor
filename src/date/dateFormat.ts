@@ -1,4 +1,4 @@
-import { isNumber, isString } from "../is/index";
+import { isNumber, isString, isEmpty } from "../is/index";
 /**
  * 时间格式化
  * @param {Date | Number} date 时间对象，如new Date(),new Date('2019/05/05 08:08:08') 或时间戳 如：1596507000
@@ -6,16 +6,22 @@ import { isNumber, isString } from "../is/index";
  * @return 返回格式化的字符串
  */
 export const dateFormat = (date: Date | number | string = new Date(), fmt: string = "YYYY-mm-dd HH:MM") => {
-	if (isString(date)) {
-		date = Date.parse((<string>date).replace(/\-+/g, "/"));
-	}
-	if (!isNaN(<number>date)) {
-		date = Number(date);
-	}
 	if (isNumber(date)) {
 		date = new Date(date);
 	}
-	if (!(date instanceof Date)) {
+	if (isString(date)) {
+		if (!isNaN(<number>date)) {
+			date = new Date(Number(date));
+		} else {
+			date = new Date((<string>date).replace(/\-+/g, "/"));
+		}
+	}
+
+	if (!(date instanceof Date) || isNaN(date.getTime())) {
+		return date;
+	}
+
+	if (isEmpty(fmt)) {
 		return date;
 	}
 	let opt: any = {
